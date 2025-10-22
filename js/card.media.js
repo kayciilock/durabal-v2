@@ -1,10 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.card-media[data-media]').forEach(el => {
-    const src = (el.dataset.media || '').trim();
-    if (!src) return;
+  document.querySelectorAll('.card-media[data-media]').forEach((el, i) => {
+    const raw = (el.dataset.media || '').trim();
+    if (!raw) return;
+
+    const url = new URL(raw, document.baseURI).href;
+
     const img = new Image();
-    img.onload = () => el.style.setProperty('--media', `url("${src}")`);
-    img.onerror = () => console.warn('card-media: not found ->', src);
-    img.src = src;
+    img.onload = () => {
+      el.style.setProperty('--media', `url("${url}")`);
+    };
+    img.onerror = () => console.warn('card-media 404:', url, el);
+    img.src = url;
   });
 });
