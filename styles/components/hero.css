@@ -1,0 +1,128 @@
+.hero{
+  position: relative;
+  height: min(calc(100svh - 72px), var(--hero-max-height));
+  width: 100%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  overflow: clip;
+  background-image:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.65)),
+    var(--hero-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:auto 0 0 0;
+  height: var(--hero-overlay);
+  pointer-events:none;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.85));
+}
+
+.hero a {
+  color: var(--hero-ink);
+}
+
+
+.hero-inner {
+  z-index: 1;
+  max-width: 1080px;
+  padding: 0 6vw;
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) 0.1s forwards;
+}
+
+.eyebrow {
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--hero-ink);
+  font-size: 0.8rem;
+}
+
+h1.headline {
+  margin: 0;
+  font-weight: 500;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+p.subhead {
+  margin: 0;
+  max-width: 70ch;
+  color: var(--ink);
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+}
+
+.hero p.subhead {
+  color: var(--hero-ink);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 6px;
+  color: var(--hero-ink);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  place-items: center;
+  gap: 8px;
+  color: var(--hero-ink);
+}
+
+.mouse {
+  width: 24px;
+  height: 38px;
+  border: 1px solid var(--hero-ink);
+  border-radius: 16px;
+  position: relative;
+}
+
+.wheel {
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 8px;
+  background: var(--hero-ink);
+  border-radius: 2px;
+  animation: wheel 1.6s ease-in-out infinite;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes wheel {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 10px);
+  }
+}

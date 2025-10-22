@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+
+  font-family:"Outfit",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,h2,h3{font-weight:500;letter-spacing:.01em;color:var(--soft-black);}
+
+.page-wrap {
+  isolation: isolate;
+  margin-inline: auto;
+}
+
+a {
+  text-decoration: none;
+  color:var(--soft-black);
+}
+
+a:hover{color:var(--forest-green);}

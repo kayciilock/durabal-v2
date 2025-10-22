@@ -1,0 +1,22 @@
+:root{
+  --bg:#f6f6f4;
+  --ink:#111111;
+  --hero-ink:#ffffff;
+  --muted:#4b4f55;
+  --line:rgba(0,0,0,.12);
+  --soft-black:#2e2f2a;
+  --olive-green:#969b84;
+  --warm-white: #f5f5ef;
+  --forest-green: #4b5a3f;
+  --cream-beige: #dedacb;
+  --sage-green: #aab295;
+  --hero-line:rgba(255,255,255,.12);
+  --pill-bg:rgba(255,255,255,.7);
+  --accent:#2a2e33;
+  --shadow:0 8px 30px rgba(0,0,0,.08);
+  --hero-image:url("../../images/hero-img.webp");
+  --logo:url("../../images/logos/DS_White.webp");
+  --page-max:1760px;
+  --hero-max-height:1200px;
+  --hero-overlay:40%;
+}

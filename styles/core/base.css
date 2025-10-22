@@ -1,0 +1,42 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  margin: 0 0 0.5em;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--ink);
+}
+
+h1 {
+  color: var(--hero-ink);
+}
+
+p {
+  margin: 0 0 1em;
+  color: var(--accent);
+}
+
+small {
+  color: var(--muted);
+}
+
+.hero small {
+  color: var(--hero-ink);
+}
+
+.card-body p.green {
+  color: var(--forest-green);
+}
+
+.card-body p span.highlight {
+  color: var(--forest-green);
+}

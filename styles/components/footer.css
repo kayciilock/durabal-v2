@@ -1,0 +1,9 @@
+footer {
+  padding: 40px 6vw;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
