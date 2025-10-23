@@ -17,6 +17,18 @@ document.addEventListener('DOMContentLoaded', () => {
     return dpr >= 1.5 && hi ? hi : base;
   };
 
+  const resolveURL = (raw) => {
+    if (!raw) return '';
+    if (/^https?:\/\//i.test(raw)) return raw;
+    if (raw.startsWith('/')) {
+      if (location.protocol === 'file:' || !location.origin || location.origin === 'null') {
+        return raw.slice(1);
+      }
+      return new URL(raw, location.origin).href;
+    }
+    try { return new URL(raw, location.href).href; } catch { return raw; }
+  };
+
   const preloadLink = (href) => {
     if (!href) return;
     if (document.querySelector(`link[rel="preload"][as="image"][href="${href}"]`)) return;
@@ -30,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const eagerLoad = (el) => {
     const raw = pickSrc(el);
     if (!raw) return;
-    const url = new URL(raw, document.baseURI).href;
+    const url = resolveURL(raw);
 
     el.style.setProperty('--media', `url("${url}")`);
 
@@ -47,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const lazyLoad = (el) => {
     const raw = pickSrc(el);
     if (!raw) return;
-    const url = new URL(raw, document.baseURI).href;
+    const url = resolveURL(raw);
 
     const img = new Image();
     img.decoding = 'async';
@@ -73,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     : null;
 
   els.forEach((el) => {
-    const priority = (el.dataset.priority || '').toLowerCase(); // "high" to force eager
+    const priority = (el.dataset.priority || '').toLowerCase();
     if (priority === 'high' || inView(el) || !io) {
       eagerLoad(el);
     } else {
