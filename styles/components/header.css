@@ -10,7 +10,6 @@ header.site-header{
   grid-template-columns: 1fr minmax(320px, 720px) 1fr;
   align-items: center;
   padding: 0 24px;
-  background: linear-gradient(to bottom, rgba(0,0,0,.45), rgba(0,0,0,0));
   backdrop-filter: saturate(120%) blur(4px);
 }
 

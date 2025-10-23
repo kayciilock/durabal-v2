@@ -5,7 +5,7 @@ h4,
 h5,
 h6 {
   font-weight: 500;
-  margin: 0 0 0.5em;
+  margin: 0;
 }
 
 h2,
@@ -33,10 +33,12 @@ small {
   color: var(--hero-ink);
 }
 
-.card-body p.green {
+.card-body p.green,
+.module p.green,
+.card-body p span.highlight {
   color: var(--forest-green);
 }
 
-.card-body p span.highlight {
-  color: var(--forest-green);
+.module.contact h1 {
+  color: var(--ink);
 }

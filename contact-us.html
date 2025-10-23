@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles/core/reset.css">
+    <link rel="stylesheet" href="styles/core/tokens.css">
+    <link rel="stylesheet" href="styles/core/base.css">
+    <link rel="stylesheet" href="styles/layouts/grid.css">
+    <link rel="stylesheet" href="styles/layouts/sections.css">
+    <link rel="stylesheet" href="styles/core/utilities.css">
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/components/forms.css">
+    <link rel="stylesheet" href="styles/components/header.css">
+    <link rel="stylesheet" href="styles/components/hero.css">
+    <link rel="stylesheet" href="styles/components/cards.css">
+    <link rel="stylesheet" href="styles/components/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  </head>
+
+<body>
+
+  <div class="page-wrap">
+    <header class="site-header">
+      <a href="/" class="brand" aria-label="Studio home">
+        <span class="brand-mark" aria-hidden="true"></span>
+      </a>
+      <nav class="primary" aria-label="Primary">
+        <a class="nav-item" href="windows-and-doors/">Windows & Doors</a>
+        <a class="nav-item" href="the-bonded-collection.html">The Bonded Collection</a>
+        <a class="nav-item" href="home-automation.html">Home Automation</a>
+        <a class="nav-item" href="design-inspirations.html">Design Inspirations</a>
+        <a class="nav-item" href="contact-us.html">Contact Us</a>
+      </nav>
+      <div class="cta">
+        <a href="contact-us.html" class="btn">Enquire Now</a>
+      </div>
+    </header>
+
+    <section class="hero hero--contact" data-hero="/images/hero-contact.webp" aria-label="Contact">
+      <div class="hero-inner">
+        <div class="eyebrow">Enquiries</div>
+        <h1 class="headline">Tell us about your project</h1>
+        <p class="subhead">We’ll respond with next steps and a clear path forward.</p>
+        <div class="hero-actions">
+          <a href="#contact-form" class="btn-solid">Start your brief</a>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section class="module contact" id="contact-form">
+        <div class="grid grid-12 contact-grid">
+          <div class="span-5 contact-content">
+            <h2>Contact us</h2>
+            <p class="subhead">Ready to transform your vision into reality? Contact Durabal Design Studio today to explore bespoke and configurable solutions tailored to your unique needs.</p>
+          </div>
+
+          <form class="span-7 contact-form" action="#" method="post" novalidate>
+            <div class="fields">
+              <div class="field">
+                <label for="first_name">First name</label>
+                <input id="first_name" name="first_name" type="text" autocomplete="given-name" required>
+              </div>
+              <div class="field">
+                <label for="last_name">Last name</label>
+                <input id="last_name" name="last_name" type="text" autocomplete="family-name" required>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+              </div>
+              <div class="field">
+                <label for="phone">Phone number</label>
+                <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel">
+              </div>
+              <div class="field span-2">
+                <label for="role">I am a</label>
+                <select id="role" name="role" required>
+                  <option value="" hidden>Select one</option>
+                  <option>Architect</option>
+                  <option>Home builder</option>
+                  <option>Developer</option>
+                  <option>Interior designer</option>
+                  <option>Homeowner</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="field span-2">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Tell us how we can help you with your window and door needs." required></textarea>
+              </div>
+            </div>
+
+            <div class="actions">
+              <button class="btn-submit" type="submit">Send enquiry</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© Durabal Design Studio</span>
+      <span>Independent, design-first, performance-led. The architectural specifications arm of CiiLOCK Engineering.</span>
+    </footer>
+  </div>
+
+</body>
+
+    <script src="js/site.motion.js" defer></script>
+</html>

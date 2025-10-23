@@ -1,9 +1,13 @@
 footer {
-  padding: 40px 6vw;
+  padding: 40px min(6vw, 48px);
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   color: var(--muted);
   display: flex;
+  flex-flow: column;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 0.5rem;
+  justify-self: center;
+  width: 100%;
+  max-width: var(--page-max);
 }
