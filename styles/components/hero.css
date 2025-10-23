@@ -62,6 +62,10 @@
     background-image: var(--contact-hero-image);
 }
 
+.hero--windowsdoors::before{
+    background-image: var(--windows-doors-hero-image);
+}
+
 .hero a {
   color: var(--hero-ink);
 }

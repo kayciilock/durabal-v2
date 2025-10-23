@@ -39,6 +39,7 @@ small {
   color: var(--forest-green);
 }
 
-.module.contact h1 {
+.module.contact h1,
+.module h1 {
   color: var(--ink);
 }
