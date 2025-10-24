@@ -21,6 +21,7 @@
   </head>
   <body>
     <div class="page-wrap">
+      
       <header class="site-header">
         <a href="/" class="brand" aria-label="Studio home">
           <span class="brand-mark" aria-hidden="true"></span>
@@ -123,7 +124,7 @@
           </div>
           <div class="grid mt-24">
             <article class="card reveal">
-              <div class="card-media"></div>
+              <div class="card-media" data-media="images/placeholders/index-mor.webp"></div>
               <div class="card-body">
                 <div class="kicker">Enabled by MOR®</div>
                 <h3>Precision Sliding</h3>
@@ -133,7 +134,7 @@
               </div>
             </article>
             <article class="card reveal">
-              <div class="card-media"></div>
+              <div class="card-media" data-media="images/placeholders/index-volta.webp"></div>
               <div class="card-body">
                 <div class="kicker">Enabled by VOLTA®</div>
                 <h3>Power-Assist</h3>
@@ -143,7 +144,7 @@
               </div>
             </article>
             <article class="card reveal">
-              <div class="card-media"></div>
+              <div class="card-media" data-media="images/placeholders/index-titan.webp"></div>
               <div class="card-body">
                 <div class="kicker">Enabled by TITAN®</div>
                 <h3>Load Management</h3>
@@ -153,7 +154,7 @@
               </div>
             </article>
             <article class="card reveal">
-              <div class="card-media"></div>
+              <div class="card-media" data-media="images/placeholders/index-vialla.webp"></div>
               <div class="card-body">
                 <div class="kicker">Enabled by VIALLA®</div>
                 <h3>Refined Hinge</h3>
@@ -397,8 +398,8 @@
               <h2>Ready to resolve your next opening?</h2>
               <p class="subhead">Book a design consultation. Bring intent, constraints and performance goals, we’ll bring options.</p>
               <div class="actions">
-                <a href="#inquiry" class="btn-solid">Book A Consultation</a>
-                <a href="#inquiry" class="btn-solid">Download Spec Snapshot</a>
+                <a href="contact-us.html" class="btn-solid">Book A Consultation</a>
+                <a href="" class="btn-solid">Download Spec Snapshot</a>
               </div>
             </div>
             <div class="col-7"></div>
@@ -407,15 +408,33 @@
 
       </main>
 
-      <footer>
-        <span>© Durabal Design Studio</span>
-        <span>Independent, design‑first, performance‑led. The architectural specifications arm of CiiLOCK Engineering.</span>
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-meta">
+            <span id="copyright">© Durabal Design Studio</span>
+            <span>Independent, design-first, performance-led. The architectural specifications arm of CiiLOCK Engineering.</span>
+            <nav class="footer-socials" aria-label="Social">
+              <a class="social" href="https://www.linkedin.com/company/durabaldesignstudio/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5zM3.5 9h3v12h-3V9zm6 0h2.9v1.64h.04c.4-.76 1.38-1.64 2.84-1.64 3.04 0 3.72 2 3.72 4.6V21h-3v-6.1c0-1.46-.03-3.33-2.03-3.33-2.03 0-2.34 1.58-2.34 3.21V21h-3V9z"/></svg>
+              </a>
+            </nav>
+          </div>
+          <nav class="footer-nav" aria-label="Footer">
+            <a href="windows-and-doors/">Windows & Doors</a>
+            <a href="the-bonded-collection.html">The Bonded Collection</a>
+            <a href="home-automation.html">Home Automation</a>
+            <a href="design-inspirations.html">Design Inspirations</a>
+            <a href="contact-us.html">Contact Us</a>
+          </nav>
+        </div>
       </footer>
+
     </div>
 
   <script src="js/site.motion.js" defer></script>
   <script src="js/card.media.js" defer></script>
   <script src="js/media.loader.js" defer></script>
+  <script src="js/get.year.js" defer></script>
 
   </body>
 </html>

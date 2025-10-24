@@ -150,6 +150,150 @@
   color: var(--muted);
 }
 
+.motioneer-form{
+  position:relative;
+  background: color-mix(in srgb, var(--olive-green) 80%, transparent);
+  color:var(--hero-ink);
+  padding:90px min(6vw,48px);
+  overflow:hidden;
+}
+
+.motioneer-form .form-opt {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+.motioneer-form .form-opt .subhead {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.motioneer-form .form-card {
+  --field-h: 48px;
+  --radius: 14px;
+  border-radius: 16px;
+  padding: 28px;
+  color: var(--hero-ink);
+}
+
+.motioneer-form .fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.motioneer-form .field {
+  display: grid;
+  gap: 8px;
+  position: relative;
+}
+.motioneer-form .field.span-2 {
+  grid-column: 1 / -1;
+}
+
+.motioneer-form label {
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.motioneer-form input,
+.motioneer-form select,
+.motioneer-form textarea {
+  appearance: none;
+  width: 100%;
+  height: var(--field-h);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--soft-black);
+  padding: 12px 14px;
+  font: inherit;
+  line-height: 1.4;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease,
+    background 0.25s ease, transform 0.2s ease;
+}
+
+.motioneer-form textarea {
+  min-height: 160px;
+  height: auto;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 14px;
+  resize: vertical;
+}
+
+.motioneer-form ::placeholder {
+  opacity: 0.6;
+  color: var(--muted);
+}
+.motioneer-form input:focus::placeholder,
+.motioneer-form textarea:focus::placeholder {
+  opacity: 0.35;
+}
+
+.motioneer-form input:hover,
+.motioneer-form select:hover,
+.motioneer-form textarea:hover {
+  border-color: rgba(0, 0, 0, 0.25);
+}
+
+.motioneer-form input:focus,
+.motioneer-form select:focus,
+.motioneer-form textarea:focus {
+  outline: 0;
+  border-color: rgba(0, 0, 0, 0.32);
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.06) inset;
+  background: #fff;
+}
+
+.motioneer-form select{
+  padding-right:44px;
+  appearance:none;
+  background-color:rgba(255,255,255,.9);
+  color: var(--soft-black);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--soft-black) 50%),
+    linear-gradient(135deg, var(--soft-black) 50%, transparent 50%);
+  background-repeat:no-repeat;
+  background-size:6px 6px, 6px 6px;
+  background-position:calc(100% - 24px) 52%, calc(100% - 18px) 52%;
+}
+
+.motioneer-form .actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-submit {
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 12px 24px;
+  letter-spacing: 0.04em;
+  transition: transform 0.25s ease, filter 0.25s ease, box-shadow 0.25s ease,
+    background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.btn-submit.green {
+  background: var(--forest-green);
+  border-color: var(--forest-green);
+  color: #fff;
+}
+
+.btn-submit.green:hover {
+  transform: translateY(-1px);
+  filter: saturate(110%);
+}
+
+.btn-submit.green:active {
+  transform: translateY(0);
+}
+
+.btn-submit.green:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
 @media (max-width: 960px) {
   .contact-form {
     padding: 20px;
@@ -158,6 +302,19 @@
     grid-template-columns: 1fr;
   }
   .contact-form .field.span-2 {
+    grid-column: auto;
+  }
+  .motioneer-form {
+    padding: 72px min(6vw, 32px);
+  }
+  .motioneer-form .form-card {
+    padding: 22px;
+  }
+  .motioneer-form .fields {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .motioneer-form .field.span-2 {
     grid-column: auto;
   }
 }

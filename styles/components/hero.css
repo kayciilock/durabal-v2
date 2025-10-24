@@ -15,9 +15,30 @@
   background-image: var(--hero-image);
   background-size: cover;
   background-position: center;
-  transform: translate3d(0, var(--hero-parallax, 0px), 0);
-  will-change: transform;
+  transform: translate3d(0, var(--hero-parallax, 0px), 0) scale(1);
+  will-change: transform, filter, opacity;
   z-index: 0;
+  animation: hero-breathe 12s ease-in-out infinite alternate;
+}
+
+@keyframes hero-breathe {
+  0% {
+    transform: scale(1);
+    filter: brightness(1) contrast(1);
+    opacity: 0.98;
+  }
+
+  100% {
+    transform: scale(1.06);
+    filter: brightness(1.03) contrast(1.02);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero::before {
+    animation: none;
+  }
 }
 
 .hero::after {
@@ -54,44 +75,48 @@
   background-image: var(--bonded-hero-image);
 }
 
-.hero--designinspo::before{
-    background-image: var(--designinspo-hero-image);
+.hero--designinspo::before {
+  background-image: var(--designinspo-hero-image);
 }
 
-.hero--contact::before{
-    background-image: var(--contact-hero-image);
+.hero--contact::before {
+  background-image: var(--contact-hero-image);
 }
 
-.hero--windowsdoors::before{
-    background-image: var(--windows-doors-hero-image);
+.hero--windowsdoors::before {
+  background-image: var(--windows-doors-hero-image);
 }
 
-.home-automation-one::before{
-    background-image: var(--home-automation-one);
+.home-automation-one::before {
+  background-image: var(--home-automation-one);
 }
 
-.home-automation-two::before{
-    background-image: var(--home-automation-two);
+.home-automation-two::before {
+  background-image: var(--home-automation-two);
 }
 
-.home-automation-three::before{
-    background-image: var(--home-automation-three);
+.home-automation-three::before {
+  background-image: var(--home-automation-three);
 }
 
-.home-automation-four::before{
-    background-image: var(--home-automation-four);
+.home-automation-four::before {
+  background-image: var(--home-automation-four);
 }
 
-.home-automation-five::before{
-    background-image: var(--home-automation-five);
+.home-automation-five::before {
+  background-image: var(--home-automation-five);
 }
 
-.home-automation-six::before{
-    background-image: var(--home-automation-six);
+.home-automation-six::before {
+  background-image: var(--home-automation-six);
 }
 
-.home-automation-seven::before{
-    background-image: var(--home-automation-seven);
+.home-automation-seven::before {
+  background-image: var(--home-automation-seven);
+}
+
+.hero-event::before {
+  background-image: var(--hero-event);
 }
 
 .hero a {
@@ -174,6 +199,27 @@ p.subhead {
   max-width: 1200px;
 }
 
+.hero--motioneer .hero-inner {
+  position: relative;
+}
+
+.hero-badge {
+  width: 150px;
+  height: 150px;
+  background: transparent;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.hero-badge img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .hero--automation {
   position: relative;
   height: min(calc(100svh - 72px), var(--hero-max-height));
@@ -189,38 +235,41 @@ p.subhead {
   height: 100%;
 }
 
-.hero-slide{
-  position:absolute;
-  inset:0;
-  display:grid;
-  place-items:center;
-  text-align:center;
-  opacity:0;
-  pointer-events:none;
-  transition:opacity .9s ease;
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.9s ease;
 }
 
-.hero-slide::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background-image:var(--hero-image);
-  background-size:cover;
-  background-position:center;
-  transform:none;
+.hero-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--hero-image);
+  background-size: cover;
+  background-position: center;
+  transform: none;
 }
 
-.hero-slide::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-  background-image:
-    linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,.85)),
-    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.65));
-  background-repeat:no-repeat, no-repeat;
-  background-size:100% 40%, 100% 100%;
-  background-position:bottom, center;
+.hero-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0.85)
+    ),
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65));
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% 40%, 100% 100%;
+  background-position: bottom, center;
 }
 
 .hero-slide .hero-inner {
@@ -305,5 +354,13 @@ p.subhead {
   .hero-next {
     width: 40px;
     height: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-badge {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
   }
 }
