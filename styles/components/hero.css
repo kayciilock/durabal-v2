@@ -66,6 +66,34 @@
     background-image: var(--windows-doors-hero-image);
 }
 
+.home-automation-one::before{
+    background-image: var(--home-automation-one);
+}
+
+.home-automation-two::before{
+    background-image: var(--home-automation-two);
+}
+
+.home-automation-three::before{
+    background-image: var(--home-automation-three);
+}
+
+.home-automation-four::before{
+    background-image: var(--home-automation-four);
+}
+
+.home-automation-five::before{
+    background-image: var(--home-automation-five);
+}
+
+.home-automation-six::before{
+    background-image: var(--home-automation-six);
+}
+
+.home-automation-seven::before{
+    background-image: var(--home-automation-seven);
+}
+
 .hero a {
   color: var(--hero-ink);
 }
