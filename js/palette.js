@@ -8,12 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const name = el.dataset.name || '';
     const sub  = el.dataset.sub  || '';
     const type = el.dataset.type || '';
+    const code = el.dataset.hex || hex;
 
     const label = document.createElement('div');
     label.className = 'label';
     label.innerHTML = `
       <div class="name">${name}</div>
-      <div class="meta"><span>${sub}</span><span>•</span><span>${type}</span><span class="code">${hex}</span></div>
+      <div class="meta"><span>${sub}</span><span>•</span><span>${type}</span><span class="code">${code}</span></div>
     `;
     el.appendChild(label);
   });

@@ -1,13 +1,110 @@
-footer {
-  padding: 40px min(6vw, 48px);
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  color: var(--muted);
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-self: center;
-  width: 100%;
-  max-width: var(--page-max);
+.site-footer{
+  width:100%;
+  border-top:1px solid rgba(0,0,0,.08);
+  padding:40px min(6vw,48px);
+  color:var(--muted);
+}
+
+.footer-inner{
+  max-width:var(--page-max);
+  margin:0 auto;
+  display:flex;
+  gap:32px;
+  align-items:flex-start;
+}
+
+.footer-meta{
+  flex:1 1 auto;
+  display:grid;
+  gap:6px;
+}
+
+.footer-nav{
+  flex:0 0 auto;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  text-align:right;
+  border-left:1px solid var(--line);
+  padding-left:20px;
+}
+
+.footer-nav a{
+  color:var(--soft-black);
+  text-decoration:none;
+  letter-spacing:.01em;
+  line-height:1.2;
+  position:relative;
+  transition:opacity .2s ease, transform .2s ease;
+  opacity:.8;
+}
+
+.footer-nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-2px;
+  width:100%;
+  height:1px;
+  background:currentColor;
+  transform:scaleX(0);
+  transform-origin:right;
+  transition:transform .25s cubic-bezier(.2,.8,.2,1);
+  opacity:.25;
+}
+
+.footer-nav a:hover{
+  opacity:1;
+  transform:translateY(-1px);
+}
+
+.footer-nav a:hover::after{
+  transform:scaleX(1);
+  transform-origin:left;
+}
+
+.footer-socials{
+  display:flex;
+  gap:14px;
+  margin-top:10px;
+}
+.footer-socials .social{
+  display:inline-grid;
+  place-items:center;
+  width:38px;
+  height:38px;
+  background-color: var(--sage-green);
+  color:var(--hero-ink);
+  transition:transform .2s ease,border-color .25s ease,box-shadow .25s ease;
+}
+
+.footer-socials .social svg{
+  width:20px;
+  height:20px;
+  fill:currentColor;
+  display:block;
+}
+
+.footer-socials .social:hover{
+  transform:translateY(-2px);
+  border-color:rgba(0,0,0,.18);
+  box-shadow:0 10px 24px rgba(0,0,0,.08);
+}
+
+
+@media (max-width:860px){
+  .footer-inner{
+    flex-direction:column;
+    gap:22px;
+  }
+
+  .footer-nav{
+    align-items:flex-start;
+    text-align:left;
+    border-left:0;
+    padding-left:0;
+    border-top:1px solid var(--line);
+    padding-top:16px;
+  }
+
 }
