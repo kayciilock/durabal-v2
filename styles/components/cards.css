@@ -46,6 +46,8 @@
 
 .card-body {
   padding: 18px 18px 22px;
+  display: flex;
+  flex-flow: column;
 }
 
 .kicker {
@@ -419,6 +421,38 @@
 
 .btn-event:focus-visible{outline:0;box-shadow:0 0 0 3px rgba(0,0,0,.08)}
 
+.ee-grid{display:grid;grid-template-columns:repeat(1,1fr);gap:18px;align-items:stretch}
+
+.ee-card{
+  display:grid;grid-template-columns:repeat(2,1fr);grid-column-gap:28px;
+  border:1px solid var(--line);border-radius:16px;background:var(--warm-white);
+  padding:22px;box-shadow:var(--shadow);
+  transition:transform .32s cubic-bezier(.22,.61,.36,1),box-shadow .32s cubic-bezier(.22,.61,.36,1),border-color .28s ease,filter .28s ease;
+  align-items: center;
+}
+
+.ee-card:hover{transform:translateY(-4px);border-color:rgba(0,0,0,.16);box-shadow:0 18px 48px rgba(0,0,0,.12);filter:saturate(1.01) contrast(1.01)}
+
+.ee-card:active{transform:translateY(-1px)}
+
+.ee-top{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:10px;margin-bottom:2px}
+
+.ee-kicker{
+  display:grid;place-items:center;min-width:36px;height:36px;border-radius:999px;
+  border:1px solid var(--line);background:rgba(0,0,0,.03);color:var(--soft-black);
+  font-size:.8rem;letter-spacing:.14em
+}
+
+.ee-card h3{margin:0;color:var(--soft-black);font-weight:600;letter-spacing:.01em}
+
+.ee-card p{margin:0;color:var(--accent);line-height:1.6}
+
+.ee-card .content {
+  display: flex;
+  flex-flow: column;
+  gap: 0.5rem;
+}
+
 @media (max-width: 960px) {
   .feature-card {
     min-height: 420px;
@@ -428,4 +462,5 @@
   }
   .event-card{padding:18px}
 
+  .ee-card{padding:18px}
 }

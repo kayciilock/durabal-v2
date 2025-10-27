@@ -156,6 +156,7 @@
   color:var(--hero-ink);
   padding:90px min(6vw,48px);
   overflow:hidden;
+  margin-bottom: 4rem;
 }
 
 .motioneer-form .form-opt {
