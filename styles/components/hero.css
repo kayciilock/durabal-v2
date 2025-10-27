@@ -83,6 +83,10 @@
   background-image: var(--contact-hero-image);
 }
 
+.hero--energy-efficiency::before {
+  background-image: var(--hero-energy-efficiency);
+}
+
 .hero--windowsdoors::before {
   background-image: var(--windows-doors-hero-image);
 }
