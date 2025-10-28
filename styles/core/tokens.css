@@ -33,4 +33,7 @@
   --hero-max-height:1200px;
   --hero-overlay:40%;
   --hero-parallax:0px;
+  --dropdown-top: 70px;
+  --hero-bespoke-designed:url("../../images/placeholders/hero-bespoke-design.webp");
+  --hero-bespoke-config:url("../../images/placeholders/hero-bespoke-config.webp");
 }
