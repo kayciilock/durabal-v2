@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const sel = '.card-media[data-media], .feature-media[data-media], .bento .media[data-media], .module .media[data-media],  .ua-media[data-media],  .nav-thumb[data-media],  .cap-media[data-media]';
+  const sel = '.card-media[data-media], .feature-media[data-media], .bento .media[data-media], .module .media[data-media],  .ua-media[data-media],  .nav-thumb[data-media],  .cap-media[data-media], .delv-media[data-media], .core-media[data-media], .motion-media[data-media]';
   const els = Array.from(document.querySelectorAll(sel));
   if (!els.length) return;
 

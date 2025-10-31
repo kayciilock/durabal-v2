@@ -737,23 +737,31 @@ ol {
   --media: none;
   background-image: var(--media);
   background-size: cover;
-  background-position: center;
+  background-position: top;
   border-radius: 14px;
   min-height: 300px;
 }
 
-.cores .core-card {
+.cores .core-card, .glazing .core-card {
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
-  border: 1px solid var(--line);
+  border: 2px solid var(--line);
   border-radius: 16px;
   background: var(--warm-white);
   overflow: hidden;
   box-shadow: var(--shadow);
+  transition: transform 0.28s cubic-bezier(0.22, 0.61, 0.36, 1),
+  box-shadow 0.28s;
 }
+
+.cores .core-card:hover, .glazing .core-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.12);
+}
+
 .core-card .core-media {
-  min-height: 220px;
+  min-height: 300px;
 }
 
 .core-card .core-body {
@@ -787,8 +795,9 @@ ol {
 }
 
 .motion-media {
-  min-height: 140px;
+  min-height: 300px;
   border-radius: 10px;
+  background-position: center;
 }
 
 .stack-rail {

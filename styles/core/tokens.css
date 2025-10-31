@@ -21,9 +21,9 @@
   --windows-doors-hero-image:url("../../images/placeholders/windowsdoors-hero.webp");
   --home-automation-one:url("../../images/home-automation-one.webp");
   --home-automation-two:url("../../images/home-automation-two.webp");
-  --home-automation-three:url("../../images/home-automation-three.webp");
+  --home-automation-three:url("../../images/switchglass.webp");
   --home-automation-four:url("../../images/home-automation-four.webp");
-  --home-automation-five:url("../../images/home-automation-five.webp");
+  --home-automation-five:url("../../images/door-access.webp");
   --home-automation-six:url("../../images/home-automation-six.webp");
   --home-automation-seven:url("../../images/home-automation-seven.webp");
   --hero-event:url("../../images/placeholders/hero-event.webp");
@@ -36,4 +36,8 @@
   --dropdown-top: 70px;
   --hero-bespoke-designed:url("../../images/placeholders/hero-bespoke-design.webp");
   --hero-bespoke-config:url("../../images/placeholders/hero-bespoke-config.webp");
+  --accent: var(--sage-green);
+  --card-bg: color-mix(in oklab, #fff 98%, transparent);
+  --card-stroke: color-mix(in oklab, #000 10%, transparent);
+  --card-stroke-strong: color-mix(in oklab, #000 16%, transparent);
 }

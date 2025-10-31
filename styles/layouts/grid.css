@@ -9,6 +9,7 @@
 .cols-2{--cols:2}
 .cols-3{--cols:3}
 .cols-4{--cols:4}
+.cols-5{--cols:5}
 .grid-12{--cols:12}
 
 .span-1{grid-column:span 1}

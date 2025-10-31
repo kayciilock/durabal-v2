@@ -97,6 +97,7 @@
     </section>
 
     <main id="configurable">
+
       <section class="module intro intro--config">
         <div class="grid grid-12 intro-grid">
           <header class="span-7">
@@ -115,11 +116,11 @@
             <p class="subhead">Choose a structural core, then finish to intent—materially and formally.</p>
           </header>
 
-          <article class="span-6 core-card">
-            <div class="core-media" data-media="images/placeholders/aluminium-core.webp"></div>
+          <article id="aluminium_core" class="span-6 core-card selectable" data-group="core">
+            <div class="core-media" data-media="images/placeholders/alu-core.webp"></div>
             <div class="core-body">
               <h3>Aluminium Core</h3>
-              <p>High-stiffness, low-mass extrusion backbone. Accepts Timber / Steel / Aluminium cladding for endless surface expression.</p>
+              <p>Accepts Timber / Steel / Aluminium cladding for endless surface expression.</p>
               <ul class="mini-list">
                 <li>Thermal break options</li>
                 <li>Hardware rails pre-indexed</li>
@@ -128,8 +129,8 @@
             </div>
           </article>
 
-          <article class="span-6 core-card">
-            <div class="core-media" data-media="images/placeholders/bonded-collection.webp"></div>
+          <article id="bonded_collection" class="span-6 core-card selectable" data-group="core">
+            <div class="core-media" data-media="images/placeholders/frontview.webp"></div>
             <div class="core-body">
               <h3>The Bonded Collection</h3>
               <p>Flush-glazed aluminium for a continuous glass aesthetic—minimal sightlines with structural bonding.</p>
@@ -152,44 +153,44 @@
           <div class="span-4 align-end"><a href="#configure" class="btn-solid">Start Configuring</a></div>
 
           <div class="span-12 motion-grid">
-            <article class="motion-card">
-              <div class="motion-media" data-media="images/placeholders/pivot.webp"></div>
+            <article id="pivotdoor" class="motion-card selectable" data-group="motion">
+              <div class="motion-media" data-media="images/placeholders/pivot-door.webp"></div>
               <h3>Pivot</h3>
               <p>Centred or offset pivots for large-format entries with balanced swing weight.</p>
             </article>
 
-            <article class="motion-card">
-              <div class="motion-media" data-media="images/placeholders/hinged.webp"></div>
+            <article id="hinged_door" class="motion-card selectable" data-group="motion">
+              <div class="motion-media" data-media="images/placeholders/hinged-door.webp"></div>
               <h3>Hinged</h3>
               <p>Discrete hinges or statement knuckles—precise reveals, robust cycles.</p>
             </article>
 
-            <article class="motion-card">
-              <div class="motion-media" data-media="images/placeholders/french.webp"></div>
+            <article id="french_door" class="motion-card selectable" data-group="motion">
+              <div class="motion-media" data-media="images/placeholders/french-doors.webp"></div>
               <h3>French</h3>
               <p>Paired leaves with clean central meeting stile; optional astragal.</p>
             </article>
 
-            <article class="motion-card">
-              <div class="motion-media" data-media="images/placeholders/sliding.webp"></div>
+            <article id="sliding_door" class="motion-card selectable" data-group="motion">
+              <div class="motion-media" data-media="images/placeholders/sliding-door.webp"></div>
               <h3>Sliding</h3>
               <p>Low-friction carriers, soft-close, and hybrid wheel options (VOLTA ready).</p>
             </article>
 
-            <article class="motion-card">
-              <div class="motion-media" data-media="images/placeholders/bifolding.webp"></div>
+            <article id="bifold_door" class="motion-card selectable" data-group="motion">
+              <div class="motion-media" data-media="images/placeholders/bifold-door.webp"></div>
               <h3>Bifolding</h3>
               <p>Precision carriers and guides for straight, corner, or pocketed runs.</p>
             </article>
 
-            <article class="motion-card">
-              <div class="motion-media" data-media="images/placeholders/lift-slide.webp"></div>
+            <article id="lift_slide" class="motion-card selectable" data-group="motion">
+              <div class="motion-media" data-media="images/placeholders/lift-slide-door.webp"></div>
               <h3>Lift &amp; Slide</h3>
               <p>Sealing pressure on demand; effortless opening with high panel mass.</p>
             </article>
 
-            <article class="motion-card">
-              <div class="motion-media" data-media="images/placeholders/slide-fold.webp"></div>
+            <article id="slide_fold" class="motion-card selectable" data-group="motion">
+              <div class="motion-media" data-media="images/placeholders/slide-fold-door.webp"></div>
               <h3>Slide &amp; Fold</h3>
               <p>Linear travel with folding stack—space-efficient, highly adaptable.</p>
             </article>
@@ -197,84 +198,114 @@
         </div>
       </section>
 
-      <section class="module stack">
+      <section class="module cores">
         <div class="grid grid-12">
           <header class="span-12">
-            <h2>Compose Your System</h2>
-            <p class="subhead">Core → Cladding → Motion → Hardware → Glazing → Certification</p>
+            <h2>Choosing the Right Glazing: A Guide to Optimal Performance</h2>
+            <p class="subhead">Choosing the right glazing maximises energy efficiency and aesthetic appeal by optimising thermal performance to suit heating or cooling needs.</p>
           </header>
 
-          <div class="span-12 stack-rail">
-            <div class="stack-row">
-              <span class="stack-label">Core</span>
-              <div class="stack-chips">
-                <span class="chip">Aluminium Core</span>
-                <span class="chip">Bonded Collection</span>
-              </div>
+          <article id="reeded" class="span-4 core-card selectable" data-group="glazing">
+            <div class="core-media" data-media="images/placeholders/reeded-glass.webp" role="img" aria-label="Aluminium Core"></div>
+            <div class="core-body">
+            <h3>Reeded</h3>
+            <p>Known for its decorative texture, reeded glass provides privacy without completely obstructing light.</p>
             </div>
-            <div class="stack-row">
-              <span class="stack-label">Cladding</span>
-              <div class="stack-chips">
-                <span class="chip">Timber</span>
-                <span class="chip">Steel</span>
-                <span class="chip">Aluminium</span>
-              </div>
+          </article>
+
+          <article id="frosted" class="span-4 core-card selectable" data-group="glazing">
+            <div class="core-media" data-media="images/placeholders/frosted-glass.webp" role="img" aria-label="Bonded Collection"></div>
+            <div class="core-body">
+            <h3>Frosted</h3>
+            <p>Ideal for privacy, frosted glass diffuses light, creating a soft glow while obscuring visibility.</p>
             </div>
-            <div class="stack-row">
-              <span class="stack-label">Motion</span>
-              <div class="stack-chips">
-                <span class="chip">Pivot</span><span class="chip">Hinged</span><span class="chip">French</span>
-                <span class="chip">Sliding</span><span class="chip">Bifolding</span><span class="chip">Lift &amp; Slide</span><span class="chip">Slide &amp; Fold</span>
-              </div>
+          </article>
+
+          <article id="low_e" class="span-4 core-card selectable" data-group="glazing">
+            <div class="core-media" data-media="images/placeholders/low-e-glass.webp" role="img" aria-label="Timber-Clad Variant"></div>
+            <div class="core-body">
+            <h3>Clear/Low-E</h3>
+            <p>This glazing allows most visible light through while reflecting a significant portion of infrared light to enhance energy efficiency.</p>
             </div>
-            <div class="stack-row">
-              <span class="stack-label">Hardware</span>
-              <div class="stack-chips">
-                <span class="chip">Hybrid Wheels</span><span class="chip">Soft-Close</span><span class="chip">VOLTA</span><span class="chip">Handles &amp; Locks</span>
-              </div>
-            </div>
-            <div class="stack-row">
-              <span class="stack-label">Glazing</span>
-              <div class="stack-chips">
-                <span class="chip">Double</span><span class="chip">Triple</span><span class="chip">Low-E</span><span class="chip">Acoustic</span>
-              </div>
-            </div>
-            <div class="stack-row">
-              <span class="stack-label">Certification</span>
-              <div class="stack-chips">
-                <span class="chip">AS2047</span><span class="chip">NatHERS</span><span class="chip">Section&nbsp;J</span>
-              </div>
-            </div>
-          </div>
+          </article>
         </div>
       </section>
 
-      <section class="module compare">
+      <section class="module cores">
         <div class="grid grid-12">
           <header class="span-12">
-            <h2>At-a-Glance Comparison</h2>
+            <h2>Certified Excellence: Meeting the Highest Standards</h2>
+            <p class="subhead">Ensure your building projects comply with the most stringent performance criteria by selecting glazing systems that meet AS2047, NatHERS, and Section J standards.</p>
           </header>
 
-          <div class="span-6 compare-card">
-            <h3>Aluminium Core</h3>
-            <ul class="sleek-list">
-              <li>Broadest cladding flexibility</li>
-              <li>Service-friendly components</li>
-              <li>Excellent weight-to-stiffness</li>
-            </ul>
-          </div>
-          <div class="span-6 compare-card">
-            <h3>Bonded Collection</h3>
-            <ul class="sleek-list">
-              <li>Continuous glass aesthetic</li>
-              <li>Minimal sightlines</li>
-              <li>Optimised water/air sealing</li>
-            </ul>
-          </div>
+          <article id="as2047" class="span-4 core-card selectable" data-group="testing">
+            <div class="core-media" data-media="images/placeholders/accredited-lab.webp" role="img" aria-label="Aluminium Core"></div>
+            <div class="core-body">
+            <h3>AS2047</h3>
+            <p>This certification guarantees that windows and doors meet Australian standards for performance, covering structural integrity, water penetration, and air infiltration.</p>
+            </div>
+          </article>
+
+          <article id="nathers" class="span-4 core-card selectable" data-group="testing">
+            <div class="core-media" data-media="images/placeholders/nathers.webp" role="img" aria-label="Bonded Collection"></div>
+            <div class="core-body">
+            <h3>NatHERS</h3>
+            <p>The Nationwide House Energy Rating Scheme rates the energy efficiency of residential buildings, helping you achieve optimal thermal comfort.</p>
+            </div>
+          </article>
+
+          <article id="section_j" class="span-4 core-card selectable" data-group="testing">
+            <div class="core-media" data-media="images/placeholders/section-j.webp" role="img" aria-label="Timber-Clad Variant"></div>
+            <div class="core-body">
+            <h3>Section J</h3>
+            <p>This part of the National Construction Code focuses on energy efficiency requirements for commercial buildings, ensuring systems meet sustainability goals.</p>
+            </div>
+          </article>
         </div>
       </section>
 
-      <section class="module">
+      <section class="module selections" id="selections">
+        <div class="grid grid-12">
+          <header class="span-12">
+            <h2>You have selected:</h2>
+          </header>
+
+          <div class="span-12 selection-row">
+            <div class="selection-label">Core</div>
+            <div class="selection-value">
+              <span class="selection-chip" data-selection-for="core">None</span>
+            </div>
+          </div>
+
+          <div class="span-12 selection-row">
+            <div class="selection-label">Motion</div>
+            <div class="selection-value">
+              <span class="selection-chip" data-selection-for="motion">None</span>
+            </div>
+          </div>
+
+          <div class="span-12 selection-row">
+            <div class="selection-label">Glazing</div>
+            <div class="selection-value">
+              <span class="selection-chip" data-selection-for="glazing">None</span>
+            </div>
+          </div>
+
+          <div class="span-12 selection-row">
+            <div class="selection-label">Certification</div>
+            <div class="selection-value">
+              <span class="selection-chip" data-selection-for="testing">None</span>
+            </div>
+          </div>
+
+          <div class="span-12" style="padding: 16px 0;margin: 6px 0 10px;">
+          <a href="contact-us.html" class="btn-event">Enquire About Your Selection Now</a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- <section class="module">
         <a class="feature-card" href="contact-us.html">
             <div class="feature-media" data-media="../images/placeholders/ctc-wd.webp"></div>
             <div class="feature-body">
@@ -284,7 +315,7 @@
             <span class="feature-cta">Enquire Now</span>
             </div>
         </a>
-      </section>
+      </section> -->
 
     </main>
 
@@ -319,6 +350,6 @@
     <script src="js/get.year.js" defer></script>
     <script src="js/dropdown.handle.js" defer></script>
     <script src="js/page.refresh.js" defer></script>
-
+    <script src="js/system.select.js" defer></script>
 
     </html>
