@@ -131,6 +131,11 @@
   background-image: var(--hero-event);
 }
 
+.hero--types-of-motion::before {
+  background-image: var(--hero-types-of-motion);
+}
+
+
 .hero a {
   color: var(--hero-ink);
 }

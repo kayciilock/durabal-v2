@@ -36,6 +36,7 @@
   --dropdown-top: 70px;
   --hero-bespoke-designed:url("../../images/placeholders/hero-bespoke-design.webp");
   --hero-bespoke-config:url("../../images/placeholders/hero-bespoke-config.webp");
+  --hero-types-of-motion:url("../../images/placeholders/hero-types-of-motion.webp");
   --accent: var(--sage-green);
   --card-bg: color-mix(in oklab, #fff 98%, transparent);
   --card-stroke: color-mix(in oklab, #000 10%, transparent);
