@@ -22,19 +22,55 @@
   <body>
     <div class="page-wrap">
         <header class="site-header">
-            <a href="index.html" class="brand" aria-label="Studio home">
+          <a href="index.html" class="brand" aria-label="Studio Home">
             <span class="brand-mark" aria-hidden="true"></span>
-            </a>
-            <nav class="primary" aria-label="Primary">
-            <a class="nav-item" href="windows-and-doors.html">Windows & Doors</a>
-            <a class="nav-item" href="the-bonded-collection.html">The Bonded Collection</a>
+          </a>
+          <nav class="primary" aria-label="Primary">
+            <div class="nav-group">
+              <a class="nav-item has-dropdown" href="">
+                Windows & Doors
+                <span class="dropdown-arrow">&#9660;</span>
+              </a>
+
+              <div class="dropdown-panel" role="menu" aria-label="Windows & Doors Menu">
+                <div class="dropdown-grid">
+                  <a class="nav-item-dropdown" href="windows-and-doors.html">
+                    <div class="nav-thumb" data-media="images/placeholders/windowsdoors-hero.webp"></div>
+                    <h4 class="nav-title">Our Windows & Doors</h4>
+                    <p class="nav-sub">Effortless motion, slim sightlines</p>
+                  </a>
+
+                  <a class="nav-item-dropdown" href="bespoke-designed-systems.html">
+                    <div class="nav-thumb" data-media="images/placeholders/design-system.webp"></div>
+                    <h4 class="nav-title">Designed Systems</h4>
+                    <p class="nav-sub">Expansive openings, seamless flow</p>
+                  </a>
+
+                  <a class="nav-item-dropdown" href="bespoke-configurable-systems.html">
+                    <div class="nav-thumb" data-media="images/placeholders/config-system.webp"></div>
+                    <h4 class="nav-title">Configurable Systems</h4>
+                    <p class="nav-sub">Statement entries, precision hardware</p>
+                  </a>
+
+                  <a class="nav-item-dropdown" href="the-bonded-collection.html">
+                    <div class="nav-thumb" data-media="images/placeholders/bonded-hero.webp"></div>
+                    <h4 class="nav-title">The Bonded Collection</h4>
+                    <p class="nav-sub">Controlled ventilation, clean lines</p>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
             <a class="nav-item" href="home-automation.html">Home Automation</a>
             <a class="nav-item" href="design-inspirations.html">Design Inspirations</a>
+            <a class="nav-item" href="events.html">Our Events</a>
             <a class="nav-item" href="contact-us.html">Contact Us</a>
-            </nav>
-            <div class="cta">
+
+          </nav>
+          <div class="cta">
             <a href="contact-us.html" class="btn">Enquire Now</a>
-            </div>
+          </div>
         </header>
 
         <section class="hero hero--bonded" data-media="images/placeholders/bonded-hero.webp" id="bonded_hero" role="img" aria-label="The Bonded Collection">
@@ -50,6 +86,32 @@
         </section>
 
         <main>
+
+          <section class="module compare">
+            <div class="grid grid-12">
+              <header class="span-12">
+                <h2>At-a-Glance Comparison</h2>
+              </header>
+
+              <div class="span-6 compare-card">
+                <h3>Aluminium Core</h3>
+                <ul class="sleek-list">
+                  <li>Broadest cladding flexibility</li>
+                  <li>Service-friendly components</li>
+                  <li>Excellent weight-to-stiffness</li>
+                </ul>
+              </div>
+              <div class="span-6 compare-card">
+                <h3>Bonded Collection</h3>
+                <ul class="sleek-list">
+                  <li>Continuous glass aesthetic</li>
+                  <li>Minimal sightlines</li>
+                  <li>Optimised water/air sealing</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
           <section class="module">
             <div class="grid grid-12">
               <div class="module-text span-5">
@@ -182,4 +244,7 @@
   <script src="js/palette.js" defer></script>
   <script src="js/media.loader.js" defer></script>
   <script src="js/get.year.js" defer></script>
+  <script src="js/dropdown.handle.js" defer></script>
+  <script src="js/page.refresh.js" defer></script>
+
 </html>

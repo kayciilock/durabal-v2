@@ -119,9 +119,22 @@
   background-image: var(--home-automation-seven);
 }
 
+.hero--bespoke-designed::before{
+  background-image: var(--hero-bespoke-designed);
+}
+
+.hero--bespoke-config::before{
+  background-image: var(--hero-bespoke-config);
+}
+
 .hero-event::before {
   background-image: var(--hero-event);
 }
+
+.hero--types-of-motion::before {
+  background-image: var(--hero-types-of-motion);
+}
+
 
 .hero a {
   color: var(--hero-ink);
@@ -132,6 +145,12 @@
   text-transform: uppercase;
   color: var(--hero-ink);
   font-size: 0.8rem;
+}
+
+
+#configurable .eyebrow, 
+#bespoke .eyebrow {
+  color: var(--olive-green);
 }
 
 h1.headline {
