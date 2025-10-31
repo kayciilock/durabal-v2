@@ -295,6 +295,84 @@
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
+.submit-details[hidden] { display: none !important; }
+
+.form-card{
+  border: 1px solid var(--line, rgba(0,0,0,.10));
+  border-radius: 14px;
+  background: color-mix(in oklab, #fff 94%, transparent);
+  box-shadow: var(--shadow, 0 8px 26px rgba(0,0,0,.08));
+  padding: 20px min(4vw, 24px);
+}
+
+.form-row{ display: grid; gap: 8px; margin-bottom: 14px; }
+.form-row:last-child{ margin-bottom: 0; }
+
+.config-forum {
+  width: fit-content;
+  justify-self: center;
+}
+
+label, legend{
+  font-size: .95rem;
+  color: var(--muted, #555);
+  letter-spacing: .01em;
+}
+
+input[type="text"], select, textarea{
+  border: 1px solid var(--line, rgba(0,0,0,.12));
+  border-radius: 10px;
+  background: #fff;
+  padding: 12px 14px;
+  font-size: 1rem;
+  color: var(--ink, #111);
+  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+input:focus, select:focus, textarea:focus{
+  outline: none;
+  border-color: var(--sage-green, #5d7f71);
+  box-shadow: 0 0 0 2px color-mix(in oklab, var(--sage-green) 22%, transparent);
+}
+
+.radio-row{ display: flex; flex-wrap: wrap; gap: 12px; }
+.radio{
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 12px; border: 1px solid var(--line, rgba(0,0,0,.12));
+  border-radius: 999px; background: color-mix(in oklab, #fff 96%, transparent);
+}
+.radio input{ accent-color: var(--sage-green, #5d7f71); }
+
+#typeFieldset.locked{
+  opacity: .65;
+  pointer-events: none;
+  border-radius: 12px;
+}
+#typeFieldset.locked .radio{
+  border-color: color-mix(in oklab, var(--sage-green) 35%, transparent);
+  background: color-mix(in oklab, var(--sage-green) 6%, #fff);
+}
+
+.muted{ color: var(--muted, #666); font-size: .9rem; }
+
+.form-actions{ margin-top: 8px; }
+
+.lock-summary .lock-card{
+  border: 1px solid var(--line, rgba(0,0,0,.1));
+  border-radius: 14px;
+  background: color-mix(in oklab, #fff 92%, transparent);
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+
+.btn-solid{
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 12px 16px; border-radius: 999px; text-decoration: none;
+  background: var(--sage-green, #5d7f71); color: #fff; font-weight: 500;
+  transition: transform .18s cubic-bezier(.22,.61,.36,1), filter .2s ease;
+}
+.btn-solid:hover{ transform: translateY(-1px); filter: brightness(1.02) saturate(1.02); }
+
 @media (max-width: 960px) {
   .contact-form {
     padding: 20px;
