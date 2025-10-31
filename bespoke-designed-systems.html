@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles/layouts/grid.css">
     <link rel="stylesheet" href="styles/layouts/sections.css">
     <link rel="stylesheet" href="styles/core/utilities.css">
+    <link rel="stylesheet" href="styles/components/forms.css">
     <link rel="stylesheet" href="styles/components/header.css">
     <link rel="stylesheet" href="styles/components/hero.css">
     <link rel="stylesheet" href="styles/components/cards.css">
@@ -219,7 +220,7 @@
               <li>Installation & Integration</li>
               <li>Performance Optimization</li>
             </ul>
-            <a href="#contact" class="btn-event">Send Us Your Details</a>
+            <a href="#submitdetails" class="btn-event" id="retrofit">Send Us Your Details</a>
           </article>
 
           <article class="span-6 deliverable-card">
@@ -231,22 +232,73 @@
               <li>Seamless Installation</li>
               <li>Ongoing Support & Maintenance</li>
             </ul>
-            <a href="#contact" class="btn-event">Send Us Your Details</a>
+            <a href="#submitdetails" class="btn-event" id="newproject">Send Us Your Details</a>
           </article>
         </div>
       </section>      
 
-<!-- g
-        <a class="feature-card" href="contact-us.html">
-            <div class="feature-media" data-media="../images/placeholders/ctc-wd.webp"></div>
-            <div class="feature-body">
-            <div class="kicker">How Do You Define Perfection?</div>
-            <h2>Bespoke Designed Systems</h2>
-            <p>Engineered from first principles and powered by CiiLOCK Motion Technologies, our bespoke systems follow a meticulous process. We deliver ready-to-install systems or a web-based ordering platform featuring quoting, waste optimisation, glazing certification, and authenticity management.</p>
-            <span class="feature-cta">Enquire Now</span>
+      <section class="module submit-details" id="submitdetails" hidden>
+        <div class="grid grid-12">
+          <header class="span-12">
+            <h2>Submit Your Project Details</h2>
+            <p class="subhead">Tell us a bit about your project and we’ll reach out with next steps.</p>
+          </header>
+
+          <form class="span-8 form-card" id="projectForm" novalidate>
+            <div class="form-row">
+              <label for="name">Your Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required placeholder="Full name">
             </div>
-        </a>
-      </section> -->
+
+            <div class="form-row">
+              <label for="location">Project Location / Type</label>
+              <select id="location" name="location" required>
+                <option value="" selected disabled>Select one</option>
+                <option>House</option>
+                <option>Apartment</option>
+                <option>Business</option>
+                <option>Townhouse</option>
+                <option>Retail</option>
+                <option>Hospitality</option>
+              </select>
+            </div>
+
+            <fieldset class="form-row" id="typeFieldset" aria-describedby="type-lock-note">
+              <legend>Project Type</legend>
+              <div class="radio-row">
+                <label class="radio">
+                  <input type="radio" name="projectType" value="Retrofit">
+                  <span>Retrofit</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="projectType" value="New Project">
+                  <span>New Project</span>
+                </label>
+              </div>
+              <small id="type-lock-note" class="muted">Locked by your selection above. Click the other option (Retrofit / New Project) to change.</small>
+            </fieldset>
+
+            <div class="form-row">
+              <label for="desc">Project Description</label>
+              <textarea id="desc" name="description" rows="5" placeholder="Briefly describe your project, goals, constraints, timelines..."></textarea>
+            </div>
+
+            <input type="hidden" name="lockedProjectType" id="lockedProjectType" value="">
+
+            <div class="form-actions">
+              <a id="submitStub" href="" class="btn-solid" role="button">Submit</a>
+            </div>
+          </form>
+
+          <aside class="span-4 lock-summary" aria-live="polite">
+            <div class="lock-card">
+              <h3>Current Selection</h3>
+              <p><strong>Project Type:</strong> <span id="currentType">—</span></p>
+              <p class="muted">This is set by the button you clicked above and is locked to keep your request clear.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
 
     </main>
 
@@ -280,6 +332,6 @@
     <script src="js/get.year.js" defer></script>
     <script src="js/dropdown.handle.js" defer></script>
     <script src="js/page.refresh.js" defer></script>
-
+    <script src="js/submit.design.system.js" defer></script>
 
     </html>
