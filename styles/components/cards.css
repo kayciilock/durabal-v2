@@ -309,7 +309,41 @@
   transition-duration: 0.6s;
 }
 
-/* Panel feel without being heavy */
+.module.selections{
+  --sage-1: color-mix(in oklab, var(--sage-green, #6f8f7f) 12%, #fff);
+  --sage-2: color-mix(in oklab, var(--sage-green, #6f8f7f) 5%, #fff);
+  position: relative;
+  isolation: isolate;
+  border-radius: 16px;
+  overflow: clip;
+  background:
+    radial-gradient(1100px 600px at 20% -10%, var(--sage-1), transparent 60%),
+    radial-gradient(900px 520px at 85% 0%,  var(--sage-1), transparent 70%),
+    linear-gradient(180deg, var(--sage-2), color-mix(in oklab, var(--sage-2) 70%, #fff));
+}
+
+.module.selections::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background-image: url("data:image/svg+xml;utf8,\<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'>\<path d='M0 31.5h32M31.5 0v32' stroke='rgba(20,30,24,0.055)' stroke-width='1'/>\</svg>");
+  background-size: 32px 32px;
+  background-repeat: repeat;
+  mix-blend-mode: multiply;
+  pointer-events:none;
+}
+
+.module.selections::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background: radial-gradient(120% 90% at 50% 10%, transparent 0 60%, rgba(0,0,0,.04) 100%);
+  pointer-events:none;
+}
+
+
 .module.selections .grid {
   border: 1px solid var(--line, rgba(0,0,0,.1));
   border-radius: 16px;
@@ -357,6 +391,7 @@
   flex-wrap: wrap;
   gap: 10px;
   min-height: 42px;
+  justify-content: start;
 }
 
 /* Chips: crisp pills with subtle depth */

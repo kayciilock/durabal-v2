@@ -215,6 +215,10 @@
     background 0.25s ease, transform 0.2s ease;
 }
 
+.motioneer-form p {
+  color: var(--soft-black);
+}
+
 .motioneer-form textarea {
   min-height: 160px;
   height: auto;

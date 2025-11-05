@@ -96,17 +96,38 @@
 
           <form class="span-7 contact-form" action="#" method="post" novalidate>
             <div class="fields">
-              <div class="field">
-                <label for="first_name">First name</label>
-                <input id="first_name" name="first_name" type="text" autocomplete="given-name" required>
+              <div class="field" style="display: none;">
+                <input type="hidden" id="region" name="region" value="Australasia">
+              </div>
+              <div class="field" style="display: none;">
+                <input type="hidden" id="userDescription" name="userDescription" value="DesignStudio">
               </div>
               <div class="field">
-                <label for="last_name">Last name</label>
-                <input id="last_name" name="last_name" type="text" autocomplete="family-name" required>
+                <label for="firstName">First name</label>
+                <input id="firstName" name="firstName" type="text" autocomplete="given-name" required>
+              </div>
+              <div class="field">
+                <label for="lastName">Last name</label>
+                <input id="lastName" name="lastName" type="text" autocomplete="family-name" required>
               </div>
               <div class="field">
                 <label for="email">Email</label>
                 <input id="email" name="email" type="email" autocomplete="email" required>
+              </div>
+              <div class="field" style="display: none;">
+                <label for="typeOfQuery"></label>
+                <select id="typeOfQuery" name="typeOfQuery" required class="uui-form_input select w-select">
+                    <option value="None" selected>Default</option>
+                    <option value="doorSystem">Tailored Door Systems</option>
+                    <option value="colourConsultation">Colour Consultation</option>
+                    <option value="aboutUs">About CiiLOCK</option>
+                    <option value="coffeeMorning">Coffee Morning Event</option>
+                    <option value="champagneEvening">Champagne Evening Event</option>
+                    <option value="glazingSolutions">Optimised Glazing Solutions</option>
+                    <option value="thermalInsulation">Maximising Thermal Insulation</option>
+                    <option value="tightnessAndSealing">Air Tightness and Sealing</option>
+                    <option value="project">Project Interest Enquiry</option>
+                </select>
               </div>
               <div class="field">
                 <label for="phone">Phone number</label>
@@ -126,9 +147,12 @@
               </div>
               <div class="field span-2">
                 <label for="message">Message</label>
-                <textarea id="message" name="message" rows="6" placeholder="Tell us how we can help you with your window and door needs." required></textarea>
+                <textarea id="message" name="message" rows="6" placeholder="Share your vision and let us guide you through your window and door journey." required></textarea>
               </div>
             </div>
+
+            <p class="success-message" style="display:none;">Thank you, your enquiry has been sent.</p>
+            <p class="error-message" style="display:none;">Sorry, something went wrong. Please try again.</p>
 
             <div class="actions">
               <button class="btn-submit" type="submit">Send enquiry</button>
@@ -168,5 +192,6 @@
   <script src="js/get.year.js" defer></script>
   <script src="js/dropdown.handle.js" defer></script>
   <script src="js/page.refresh.js" defer></script>
+  <script src="js/submit.api.js" defer></script>
   
 </html>
