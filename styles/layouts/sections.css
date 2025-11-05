@@ -16,6 +16,11 @@ main .section {
   padding: 90px min(6vw, 48px);
 }
 
+div.full-width {
+  max-width: 100%;
+  justify-self: stretch;
+}
+
 #system_design .stack {
   display: grid;
   gap: 14px;
@@ -38,6 +43,10 @@ main .section {
   max-width: var(--page-max);
   justify-self: center;
   width: 100%;
+}
+
+.module.no-border {
+  border-top: none;
 }
 
 .module .grid {

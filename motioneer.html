@@ -154,57 +154,59 @@
                 </div>
             </section>  
 
-            <section class="module motioneer-form" id="fabricator">
-            <div class="grid grid-12">
-                <div class="span-5 form-opt">
-                <h2>Join Durabal Studio as a Fabricator.</h2>
-                <p >Submit your details to become a part of our exclusive fabricator network.</p>
-                </div>
+            <div class="motioneer-form full-width" id="fabricator">
+                <section class="module no-border">
+                    <div class="grid grid-12">
+                        <div class="span-5 form-opt">
+                        <h2>Join Durabal Studio as a Fabricator.</h2>
+                        <p >Submit your details to become a part of our exclusive fabricator network.</p>
+                        </div>
 
-                <form class="span-7 form-card" action="#" method="post" novalidate>
-                <div class="fields">
-                    <div class="field">
-                    <label for="name">Name</label>
-                    <input id="name" name="name" type="text" autocomplete="name" placeholder="Name" required>
+                        <form class="span-7 form-card" action="#" method="post" novalidate>
+                        <div class="fields">
+                            <div class="field">
+                            <label for="name">Name</label>
+                            <input id="name" name="name" type="text" autocomplete="name" placeholder="Name" required>
+                            </div>
+                            <div class="field">
+                            <label for="business">Business name</label>
+                            <input id="business" name="business" type="text" autocomplete="organization" placeholder="Business Name" required>
+                            </div>
+                            <div class="field">
+                            <label for="location">Location</label>
+                            <select id="location" name="location" required>
+                                <option value="" hidden>Select a region</option>
+                                <option>VIC</option>
+                                <option>NSW</option>
+                                <option>QLD</option>
+                                <option>SA</option>
+                                <option>WA</option>
+                                <option>TAS</option>
+                                <option>ACT</option>
+                                <option>NT</option>
+                                <option>New Zealand</option>
+                            </select>
+                            </div>
+                            <div class="field">
+                            <label for="email_f">Email</label>
+                            <input id="email_f" name="email" type="email" autocomplete="email" placeholder="Email" required>
+                            </div>
+                            <div class="field span-2">
+                            <label for="phone_f">Phone</label>
+                            <input id="phone_f" name="phone" type="tel" inputmode="tel" placeholder="(Optional)" autocomplete="tel">
+                            </div>
+                            <div class="field span-2">
+                            <label for="message_f">Message</label>
+                            <textarea id="message_f" name="message" rows="6" placeholder="Tell us about your expertise, unique materials, or custom finishes that make you stand out. We’d love to hear how you can be part of our network." required></textarea>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <button class="btn-submit green" type="submit">Submit</button>
+                        </div>
+                        </form>
                     </div>
-                    <div class="field">
-                    <label for="business">Business name</label>
-                    <input id="business" name="business" type="text" autocomplete="organization" placeholder="Business Name" required>
-                    </div>
-                    <div class="field">
-                    <label for="location">Location</label>
-                    <select id="location" name="location" required>
-                        <option value="" hidden>Select a region</option>
-                        <option>VIC</option>
-                        <option>NSW</option>
-                        <option>QLD</option>
-                        <option>SA</option>
-                        <option>WA</option>
-                        <option>TAS</option>
-                        <option>ACT</option>
-                        <option>NT</option>
-                        <option>New Zealand</option>
-                    </select>
-                    </div>
-                    <div class="field">
-                    <label for="email_f">Email</label>
-                    <input id="email_f" name="email" type="email" autocomplete="email" placeholder="Email" required>
-                    </div>
-                    <div class="field span-2">
-                    <label for="phone_f">Phone</label>
-                    <input id="phone_f" name="phone" type="tel" inputmode="tel" placeholder="(Optional)" autocomplete="tel">
-                    </div>
-                    <div class="field span-2">
-                    <label for="message_f">Message</label>
-                    <textarea id="message_f" name="message" rows="6" placeholder="Tell us about your expertise, unique materials, or custom finishes that make you stand out. We’d love to hear how you can be part of our network." required></textarea>
-                    </div>
-                </div>
-                <div class="actions">
-                    <button class="btn-submit green" type="submit">Submit</button>
-                </div>
-                </form>
+                </section>
             </div>
-            </section>
                 
             <footer class="site-footer">
                 <div class="footer-inner">
